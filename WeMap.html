@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8" />
+    <title>WeMap</title>
+    
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+  </head>
+
+  <body style="margin: 0; overflow: hidden">
+    <div class="container">
+      <button
+        name="redirect"
+        position="0 0 -1"
+        onclick="window.location='https://sh1656.wixsite.com/wellesley-map';"
+        value="click here"
+      >
+        Live Update
+      </button>
+    </div>
+
+    <a-scene
+      vr-mode-ui="enabled: false;"
+      loading-screen="enabled: false;"
+      arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
+      id="scene"
+      embedded
+      gesture-detector
+    >
+
+      <a-assets>
+        <img
+          id="alumnae"
+          src="https://cdn.glitch.global/5d44d0ee-1fba-44c8-bdc5-9b78d558bd98/alumnae.png?v=1682807919820">
+        <img
+          id="billings"
+          src="https://cdn.glitch.global/5d44d0ee-1fba-44c8-bdc5-9b78d558bd98/sch.png?v=1682807936954">
+        <img
+          id="clapp"
+          src="https://cdn.glitch.global/5d44d0ee-1fba-44c8-bdc5-9b78d558bd98/clapp.png?v=1682807923681">
+        <img
+          id="chapel"
+          src="https://cdn.glitch.global/5d44d0ee-1fba-44c8-bdc5-9b78d558bd98/chapel.png?v=1682807921492">
+        <img
+          id="collins"
+          src="https://cdn.glitch.global/5d44d0ee-1fba-44c8-bdc5-9b78d558bd98/collins.png?v=1682807925193">
+        <img
+          id="founders"
+          src="https://cdn.glitch.global/5d44d0ee-1fba-44c8-bdc5-9b78d558bd98/founders.png?v=1682807926681">
+        <img
+          id="green"
+          src="https://cdn.glitch.global/5d44d0ee-1fba-44c8-bdc5-9b78d558bd98/green.png?v=1682807928018">
+        <img
+          id="jewett"
+          src="https://cdn.glitch.global/5d44d0ee-1fba-44c8-bdc5-9b78d558bd98/jewett.png?v=1682807929416">
+        <img
+          id="lulu"
+          src="https://cdn.glitch.global/5d44d0ee-1fba-44c8-bdc5-9b78d558bd98/lulu.png?v=1682807930829">
+        <img
+          id="pne"
+          src="https://cdn.glitch.global/5d44d0ee-1fba-44c8-bdc5-9b78d558bd98/pne.png?v=1682807933685">
+        <img
+          id="pnw"
+          src="https://cdn.glitch.global/5d44d0ee-1fba-44c8-bdc5-9b78d558bd98/pnw.png?v=1682807935126">
+        <img
+          id="sci"
+          src="https://cdn.glitch.global/5d44d0ee-1fba-44c8-bdc5-9b78d558bd98/sci.png?v=1682807938444">
+        <img
+          id="whitin/greenHouse"
+          src="https://cdn.glitch.global/5d44d0ee-1fba-44c8-bdc5-9b78d558bd98/obs.png?v=1682807932243">
+      </a-assets>
+
+      
+      <!-- Marker 1: Alumnae Hall -->
+      <a-marker
+        type="pattern"
+        preset="custom"
+        url="https://cdn.glitch.global/5d44d0ee-1fba-44c8-bdc5-9b78d558bd98/pattern-AlumnaeHall.patt?v=1680809516957"
+        cursor="fuse: false; rayOrigin: mouse;"
+      >
+        <a-image
+          src="#alumnae"
+          scale="1 1 1"
+          position="0 0 1"
+          rotation="-90 0 0"
+          gesture-handler="minScale: 0.25; maxScale: 10; rotationFactor: 0"
+        ></a-image>
+      </a-marker>
+
+      
+      <!-- Marker 2: Billings -->
+      <a-marker
+        type="pattern"
+        preset="custom"
+        url="https://cdn.glitch.global/5d44d0ee-1fba-44c8-bdc5-9b78d558bd98/pattern-Billings.patt?v=1680809517583"
+        cursor="fuse: false; rayOrigin: mouse;"
+      >
+        <a-image
+          src="#billings"
+          scale="1 1 1"
+          position="0 0 1"
+          rotation="-90 0 0"
+          gesture-handler="minScale: 0.25; maxScale: 10; rotationFactor: 0"
+        ></a-image>
+      </a-marker>
+      
+
+      <!-- Marker 3: Chapel -->
+      <a-marker
+        type="pattern"
+        preset="custom"
+        url="https://cdn.glitch.global/5d44d0ee-1fba-44c8-bdc5-9b78d558bd98/pattern-Chapel.patt?v=1680809534012"
+        cursor="fuse: false; rayOrigin: mouse;"
+      >
+        <a-image
+          src="#chapel"
+          scale="1 1 1"
+          position="0 0 1"
+          rotation="-90 0 0"
+          gesture-handler="minScale: 0.25; maxScale: 10; rotationFactor: 0"
+        ></a-image>
+      </a-marker>
+      
+
+      <!-- Marker 4: Clapp -->
+      <a-marker
+        type="pattern"
+        preset="custom"
+        url="https://cdn.glitch.global/5d44d0ee-1fba-44c8-bdc5-9b78d558bd98/pattern-Clapp.patt?v=1680809539755"
+        cursor="fuse: false; rayOrigin: mouse;"
+      >
+        <a-image
+          src="#clapp"
+          scale="1 1 1"
+          position="0 0 1"
+          rotation="-90 0 0"
+          gesture-handler="minScale: 0.25; maxScale: 10; rotationFactor: 0"
+        ></a-image>
+      </a-marker>
+      
+
+      <!-- Marker 5: Collins-->
+      <a-marker
+        type="pattern"
+        preset="custom"
+        url="https://cdn.glitch.global/5d44d0ee-1fba-44c8-bdc5-9b78d558bd98/pattern-Collins.patt?v=1680809545983"
+        cursor="fuse: false; rayOrigin: mouse;"
+      >
+        <a-image
+          src="#collins"
+          scale="1 1 1"
+          position="0 0 1"
+          rotation="-90 0 0"
+          gesture-handler="minScale: 0.25; maxScale: 10; rotationFactor: 0"
+        ></a-image>
+      </a-marker>
+
+      <!-- Marker 6: Founders -->
+      <a-marker
+        type="pattern"
+        preset="custom"
+        url="https://cdn.glitch.global/5d44d0ee-1fba-44c8-bdc5-9b78d558bd98/pattern-Founders.patt?v=1680809546462"
+        cursor="fuse: false; rayOrigin: mouse;"
+      >
+        <a-image
+          src="#founders"
+          scale="1 1 1"
+          position="0 0 1"
+          rotation="-90 0 0"
+          gesture-handler="minScale: 0.25; maxScale: 10; rotationFactor: 0"
+        ></a-image>
+      </a-marker>
+
+      <!-- Marker 7: Green Hall -->
+      <a-marker
+        type="pattern"
+        preset="custom"
+        url="https://cdn.glitch.global/5d44d0ee-1fba-44c8-bdc5-9b78d558bd98/pattern-Green%20Hall.patt?v=1680809518150"
+        cursor="fuse: false; rayOrigin: mouse;"
+      >
+        <a-image
+          src="#green"
+          scale="1 1 1"
+          position="0 0 1"
+          rotation="-90 0 0"
+          gesture-handler="minScale: 0.25; maxScale: 10; rotationFactor: 0"
+        ></a-image>
+      </a-marker>
+
+      <!-- Marker 8: Green House -->
+      <a-marker
+        type="pattern"
+        preset="custom"
+        url="https://cdn.glitch.global/5d44d0ee-1fba-44c8-bdc5-9b78d558bd98/pattern-GreenHouse.patt?v=1680809518688"
+        cursor="fuse: false; rayOrigin: mouse;"
+      >
+        <a-image
+          src="#whitin/greenHouse"
+          scale="1 1 1"
+          position="0 0 1"
+          rotation="-90 0 0"
+          gesture-handler="minScale: 0.25; maxScale: 10; rotationFactor: 0"
+        ></a-image>
+      </a-marker>
+
+      <!-- Marker 9: Jewett -->
+      <a-marker
+        type="pattern"
+        preset="custom"
+        url="https://cdn.glitch.global/5d44d0ee-1fba-44c8-bdc5-9b78d558bd98/pattern-Jewett.patt?v=1680809534815"
+        cursor="fuse: false; rayOrigin: mouse;"
+      >
+        <a-image
+          src="#jewett"
+          scale="1 1 1"
+          position="0 0 1"
+          rotation="-90 0 0"
+          gesture-handler="minScale: 0.25; maxScale: 10; rotationFactor: 0"
+        ></a-image>
+      </a-marker>
+
+      <!-- Marker 10: Lulu -->
+      <a-marker
+        type="pattern"
+        preset="custom"
+        url="https://cdn.glitch.global/5d44d0ee-1fba-44c8-bdc5-9b78d558bd98/pattern-Lulu.patt?v=1680809540816"
+        cursor="fuse: false; rayOrigin: mouse;"
+      >
+        <a-image
+          src="#lulu"
+          scale="1 1 1"
+          position="0 0 1"
+          rotation="-90 0 0"
+          gesture-handler="minScale: 0.25; maxScale: 10; rotationFactor: 0"
+        ></a-image>
+      </a-marker>
+
+      <!-- Marker 11: PNE -->
+      <a-marker
+        type="pattern"
+        preset="custom"
+        url="https://cdn.glitch.global/5d44d0ee-1fba-44c8-bdc5-9b78d558bd98/pattern-PNE.patt?v=1680809547278"
+        cursor="fuse: false; rayOrigin: mouse;"
+      >
+        <a-image
+          src="#pne"
+          scale="1 1 1"
+          position="0 0 1"
+          rotation="-90 0 0"
+          gesture-handler="minScale: 0.25; maxScale: 10; rotationFactor: 0"
+        ></a-image>
+      </a-marker>
+
+      <!-- Marker 12: PNW -->
+      <a-marker
+        type="pattern"
+        preset="custom"
+        url="https://cdn.glitch.global/5d44d0ee-1fba-44c8-bdc5-9b78d558bd98/pattern-PNW.patt?v=1680809547487"
+        cursor="fuse: false; rayOrigin: mouse;"
+      >
+        <a-image
+          src="#pnw"
+          scale="1 1 1"
+          position="0 0 1"
+          rotation="-90 0 0"
+          gesture-handler="minScale: 0.25; maxScale: 10; rotationFactor: 0"
+        ></a-image>
+      </a-marker>
+
+      <!-- Marker 13: Science Center -->
+      <a-marker
+        type="pattern"
+        preset="custom"
+        url="https://cdn.glitch.global/5d44d0ee-1fba-44c8-bdc5-9b78d558bd98/pattern-sci.patt?v=1679365731254"
+        cursor="fuse: false; rayOrigin: mouse;"
+      >
+        <a-image
+          src="#sci"
+          scale="1 1 1"
+          position="0 0 1"
+          rotation="-90 0 0"
+          gesture-handler="minScale: 0.25; maxScale: 10; rotationFactor: 0"
+        ></a-image>
+      </a-marker>
+
+      <!-- Marker 14: Whitin -->
+      <a-marker
+        type="pattern"
+        preset="custom"
+        url="https://cdn.glitch.global/5d44d0ee-1fba-44c8-bdc5-9b78d558bd98/pattern-Whitin.patt?v=1680809521452"
+        cursor="fuse: false; rayOrigin: mouse;"
+      >
+        <a-image
+          src="#whitin/greenHouse"
+          scale="1 1 1"
+          position="0 0 1"
+          rotation="-90 0 0"
+          gesture-handler="minScale: 0.25; maxScale: 10; rotationFactor: 0"
+        ></a-image>
+      </a-marker>
+
+      <!-- scene uses camera -->
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
