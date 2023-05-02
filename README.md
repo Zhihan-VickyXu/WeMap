@@ -19,3 +19,5 @@ _Sometimes it gets glitchy and nothing appears when you tap on the objects. I re
 Check Live Demo: https://panoramic-broad-muscle.glitch.me
 
 Glitch Code: https://glitch.com/edit/#!/panoramic-broad-muscle
+
+Live Site: https://sh1656.wixsite.com/wellesley-map
