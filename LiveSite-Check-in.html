@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+  <title>Science Center Live Update</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <h1>Are you here now? </h1>
+  <form action="">
+    Check-in: <input type="text" name="name" value="" />
+    <input type="submit" value="Submit" />
+  </form>
+  <form>
+    <label>Are you open to work/study buddies?</label>
+    <input type="checkbox" id="workBuddy" name="yes" value="yes">Yes
+    <input type="checkbox" name="no" value="no">No
+  </form>
+    
+  <div>People here now:<br>
+    <ul id="name"></ul></div>
+    
+  <script>
+    // var user_time_dct = {}
+    document.querySelector('form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.querySelector('input[name="name"]');
+    
+      // var dateTime = new Date(); 
+      // dateTime.setHours(dateTime.getHours() + 1);
+      //user_time_dct[name.value] = dateTime;
+    
+      if (document.getElementById("workBuddy").checked) {
+          var content = `<li id=${name.value}>` + name.value + ' <i class="fa fa-handshake-o"></i></li>';
+      } else {
+          var content = `<li id=${name.value}>` + name.value + "</li>";
+      }
+        
+      document.querySelector('#name').innerHTML += content;
+        
+      // setTimeout(function(){
+      // document.querySelector(`#${name.value}`).style.display = "none";
+      // }, 3600000);
+    });
+  </script>
+</body>
+</HTML>
