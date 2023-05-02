@@ -21,3 +21,9 @@ Check Live Demo: https://panoramic-broad-muscle.glitch.me
 Glitch Code: https://glitch.com/edit/#!/panoramic-broad-muscle
 
 Live Site: https://sh1656.wixsite.com/wellesley-map
+
+<img width="1026" alt="main page" src="https://user-images.githubusercontent.com/67094287/235562679-c2fd21be-bf6e-4c83-a3e2-ca983fe04418.png">
+
+Live Site (science center subpage): https://sh1656.wixsite.com/wellesley-map/science-center
+
+<img width="1058" alt="sci" src="https://user-images.githubusercontent.com/67094287/235562276-06d74ed4-a86f-480e-90d8-9bb8930f8e19.png">
